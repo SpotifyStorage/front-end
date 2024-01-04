@@ -1,0 +1,7 @@
+<input #trackId/>
+
+<button (click)="callApi(trackId.value)">
+    Submit
+</button>
+
+<p>{{currentArtistPlaycount$ | async}}</p>

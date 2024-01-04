@@ -1,0 +1,12 @@
+<input [(ngModel)]="artistName"
+       type="text"
+       placeholder="Pick one"
+       matInput
+       [matAutocomplete]="auto"
+       (ngModelChange)="get()">
+
+<mat-autocomplete #auto="matAutocomplete">
+    @for (artist of artistsList$ | async; track artist.uri) {
+      <mat-option [value]="artist.uri">{{artist.name}}</mat-option>
+    }
+</mat-autocomplete>
