@@ -25,6 +25,9 @@ export class TestComponent {
             .pipe(
                 map( x => x.data.playcount )
             )
+            // .subscribe(playcountsData => {
+            //     console.log(playcountsData.data.playcount)
+            // })
     }
 }
 
